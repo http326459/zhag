@@ -1,0 +1,91 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="yes" name="apple-mobile-web-app-capable" />  
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />  
+<meta content="telephone=no" name="format-detection" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>会员卡</title>
+ 
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+	$(function(){
+		var h = $("#page").height();
+		var ht = 0;
+		var timer="";
+		var obj = document.getElementById("page");
+		/*$("#page").mouseover(function(){
+			timer = setInterval(function(){
+				//console.log(h);
+				if(ht > -h){
+					ht-=1;
+					$(".pages1").css("margin-top",ht+"px");
+				}else{
+					clearTimeout(timer);
+					window.location='Fireworks.html';
+					console.log(ht);
+				}
+			},10);
+		});*/
+/*		$("#page").mouseout(function(){
+			clearInterval(timer);
+			timer = setInterval(function(){
+			if(ht > -h){
+				ht+=1;
+				$(".pages1").css("margin-top",ht+"px");
+			}else{
+				clearInterval(timer);
+			}
+			},10);
+		});*/
+		obj.addEventListener('touchstart',function(event){
+		     // 如果这个元素的位置内只有一个手指的话
+		    if(event.targetTouches.length == 1){
+		　　　　 	event.preventDefault();// 阻止浏览器默认事件，重要 
+		        timer = setInterval(function(){
+		        // 把元素放在手指所在的位置
+					if(ht > -h){
+						ht-=1;
+						obj.style.marginTop = ht +'px';
+					}else{
+						clearTimeout(timer);
+						window.location='Fireworks.html';
+						//console.log(ht);
+					}
+		        },10);
+		    }
+		}, false);
+		obj.addEventListener('touchend',function(event){
+		     // 如果这个元素的位置内只有一个手指的话
+		    if(event.targetTouches.length == 1){
+		　　　　 	event.preventDefault();// 阻止浏览器默认事件，重要 
+		        timer = setInterval(function(){
+		        // 把元素放在手指所在的位置
+					if(ht > -h && ht == -h){
+						ht+=1;
+						obj.style.marginTop = ht +'px';
+					}else{
+						clearTimeout(timer);
+					}
+		        },10);
+		    }
+		}, false);
+		
+	});
+</script>
+</head>
+<body>
+	<div class="box">
+		<img src="images/indexbg.jpg">
+		<div id="page">
+			<div class="pages1"></div>
+			<div class="pages2"></div>
+		</div>
+	</div>
+</body>
+<script>
+ //window.setTimeout("window.location='Fireworks.html'",5000);
+</script>
+</html>

@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+body{ margin:0; padding:0; font:100% Arial, Helvetica, sans-serif ;  color:#221814;line-height:120%; width:100%; height:100%; font-size:0.8rem; background:#333; width:100%; height:100% }
+img{ border:none;}
+h1,h2,h3{ margin:0; padding:0}
+ul{ margin:0; padding:0; list-style-type:none}
+.mr1{ margin-right:10px}
+.dn{ display:none}
+a{ text-decoration:none}
+.box{position:relative;}
+.box img{width:100%;}
+.box #page{position:absolute;left:50%;top:15%;height:50%;overflow:hidden;width:80%;margin-left:-40%;}
+#page .pages1{height:100%;background-image:url(../images/xian.png);background-repeat:no-repeat;background-position:center 29%;background-attachment:fixed;background-size:70%;}
+#page .pages2{height:100%;background-image:url(../images/zz.png);background-repeat:no-repeat;background-position:center 29%;background-attachment:fixed;background-size:70%;}
+
+.city{width:100%;position:fixed;bottom: 0px;z-index: 100; height:100%; left:0;/*background:url(../images/bgtt.jpg) no-repeat; background-size:cover;*/}
+.yhzf{position:absolute;text-align:center;width:80%;line-height:30px;font-size:1rem;z-index:1000;left:50%;top:10px;color:#fff;display:none;margin-left:-40%;}
+.yhzf span{font-size:1.2rem}
+.makbt{position:absolute;left:50%;bottom:10%;margin-left:-40%;z-index:100;display:none;width:80%;}
+.makbt a{display:block;width:100%;height:40px;background:#886615;color:#fff;text-align:center;line-height:40px;font-size:1rem;}
+#mak{position:relative;}/*{background:url(../images/bg3.1.jpg) no-repeat; background-size:100% 100%;}*/
+#mak img{width:100%;}
+#mak .for{height:auto;width:80%;position:absolute;left:50%;margin-left:-40%;top:20%;}
+#mak .for input{width:100%;margin-bottom:5%;height:50px;line-height:50px;background:none;text-align:center;font-size:0.8rem;color:#886615;border:none;display:block;background:url(../images/jinbian.png) no-repeat;background-size:100% 100%;font-weight:bold;}
+::-webkit-input-placeholder {color:#886615;}
+#mak .for input:nth-child(1){width:49%;background:url(../images/dubian.png) no-repeat;float:left;background-size:100% 100%;}
+#mak .for input:nth-child(2){width:49%;background:url(../images/dubian.png) no-repeat;float:right;background-size:100% 100%;}
+#mak .but{ width:100%;height:50px;background:#886615;font-weight:bold;font-size:0.8rem;color:#fff;text-align:center;line-height:50px;letter-spacing:2px;}
+#end{position:relative;}
+#end .si img{width: 100%;height: 100%;}
+#end a{position:absolute;left:50%;top:37%;width:76%;height:50px;display:block;margin-left:-38%;}
