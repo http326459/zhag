@@ -12,23 +12,24 @@
 <script src="js/jquery-1.8.3.min.js"></script>
 <script>
 	$(function(){
-		var h = $("#page").height();
-		var ht = 0;
-		var timer="";
-		var obj = document.getElementById("page");
-		$("#page").mouseover(function(){
+		//var h = $("#page").height();
+		var ht = 42;
+		var yanhua = "";
+		//var obj = $("#page");
+		var obt = $(".pages2");
+		//obt.slideUp(5000);
+		/*$("#page").mouseover(function(){
 			timer = setInterval(function(){
-				//console.log(h);
-				if(ht > -h){
-					ht-=1;
-					$(".pages1").css("margin-top",ht+"px");
+				if(ht > 0){
+					ht-=0.5;
+					obt.height(ht+'%');
 				}else{
 					clearTimeout(timer);
 					window.location='Fireworks.html';
-					console.log(ht);
+					//console.log(ht);
 				}
-			},10);
-		});
+			},50);
+		});*/
 /*		$("#page").mouseout(function(){
 			clearInterval(timer);
 			timer = setInterval(function(){
@@ -39,22 +40,22 @@
 				clearInterval(timer);
 			}
 			},10);
-		});
+		});*/
+		var obj = document.getElementById("page");
 		obj.addEventListener('touchstart',function(event){
 		     // 如果这个元素的位置内只有一个手指的话
 		    if(event.targetTouches.length == 1){
 		　　　　 	event.preventDefault();// 阻止浏览器默认事件，重要 
 		        timer = setInterval(function(){
-		        // 把元素放在手指所在的位置
-					if(ht > -h){
-						ht-=1;
-						obj.style.marginTop = ht +'px';
-					}else{
-						clearTimeout(timer);
-						window.location='Fireworks.html';
-						//console.log(ht);
-					}
-		        },10);
+				if(ht > 0){
+					ht-=0.5;
+					obt.height(ht+'%');
+				}else{
+					clearTimeout(timer);
+					window.location='Fireworks.html';
+					//console.log(ht);
+				}
+			},50);
 		    }
 		}, false);
 		obj.addEventListener('touchend',function(event){
@@ -62,27 +63,28 @@
 		    if(event.targetTouches.length == 1){
 		　　　　 	event.preventDefault();// 阻止浏览器默认事件，重要 
 		        timer = setInterval(function(){
-		        // 把元素放在手指所在的位置
-					if(ht > -h && ht == -h){
-						ht+=1;
-						obj.style.marginTop = ht +'px';
-					}else{
-						clearTimeout(timer);
-					}
-		        },10);
+				if(ht < 42){
+					ht+=0.5;
+					obt.height(ht+'%');
+				}else{
+					clearTimeout(timer);
+					window.location='Fireworks.html';
+					//console.log(ht);
+				}
+			},50);
 		    }
-		}, false);*/
+		}, false);/**/
 		
 	});
 </script>
 </head>
 <body>
 	<div class="box">
-		<img src="images/indexbg.jpg">
 		<div id="page">
 			<div class="pages1"></div>
-			<div class="pages2"></div>
+			<div class="pages2"><img src="images/xiang.png"></div>	
 		</div>
+		<img src="images/214.jpg">
 	</div>
 </body>
 <script>
