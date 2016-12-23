@@ -74,8 +74,9 @@
 			},50);
 		    }
 		}, false);*/
-		$(".kong").bind('touchstart', function(){
+		$(".kong").bind('touchstart', function(e){
 			//alert("1111111");
+			 e.preventDefault();
 			timer = setInterval(function(){
 				if(ht > 0){
 					ht-=0.5;
