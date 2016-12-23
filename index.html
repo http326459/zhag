@@ -15,10 +15,10 @@
 		//var h = $("#page").height();
 		var ht = 100;
 		var yanhua = "";
-		var obj = $("#kong");
+		/*var obj = $("#kong");
 		var obt = $(".pages2");
 		//obt.slideUp(5000);
-		/*$("#page").mouseover(function(){
+		$("#page").mouseover(function(){
 			timer = setInterval(function(){
 				if(ht > 0){
 					ht-=0.5;
@@ -74,19 +74,35 @@
 			},50);
 		    }
 		}, false);*/
-		obj.bind("taphold",function(){
+		$(".kong").bind('touchstart', function(){
+			//alert("1111111");
 			timer = setInterval(function(){
 				if(ht > 0){
 					ht-=0.5;
-					obt.height(ht+'%');
+					$(".pages2").height(ht+'%');
 				}else{
 					clearTimeout(timer);
 					window.location='Fireworks.html';
 					//console.log(ht);
 				}
 			},50);
+			
+			//window.ontouchstart = function(e) { e.preventDefault(); };
 		});
-		window.ontouchstart = function(e) { e.preventDefault(); };
+		$(".kong").bind('touchend', function(){
+			//alert("1111111");
+			clearTimeout(timer);
+			/*timer = setInterval(function(){
+				if(ht > 0){
+					ht-=0.5;
+					$(".pages2").height(ht+'%');
+				}else{
+					clearTimeout(timer);
+					window.location='Fireworks.html';
+					//console.log(ht);
+				}
+			},50);*/
+		});
 	});
 </script>
 </head>
