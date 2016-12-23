@@ -13,7 +13,7 @@
 <script>
 	$(function(){
 		//var h = $("#page").height();
-		var ht = 42;
+		var ht = 100;
 		var yanhua = "";
 		//var obj = $("#page");
 		var obt = $(".pages2");
@@ -63,7 +63,7 @@
 		    if(event.targetTouches.length == 1){
 		　　　　 	event.preventDefault();// 阻止浏览器默认事件，重要 
 		        timer = setInterval(function(){
-				if(ht < 42){
+				if(ht < 100){
 					ht+=0.5;
 					obt.height(ht+'%');
 				}else{
@@ -80,11 +80,12 @@
 </head>
 <body>
 	<div class="box">
+		<div><img src="images/2132.jpg"></div>
 		<div id="page">
-			<div class="pages1"></div>
+			<img src="images/2131.jpg" />
 			<div class="pages2"><img src="images/xiang.png"></div>	
 		</div>
-		<img src="images/214.jpg">
+		<div><img src="images/214.jpg"></div>
 	</div>
 </body>
 <script>
