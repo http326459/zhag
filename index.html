@@ -15,7 +15,7 @@
 		//var h = $("#page").height();
 		var ht = 100;
 		var yanhua = "";
-		//var obj = $("#page");
+		var obj = $("#page");
 		var obt = $(".pages2");
 		//obt.slideUp(5000);
 		/*$("#page").mouseover(function(){
@@ -41,7 +41,7 @@
 			}
 			},10);
 		});*/
-		var obj = document.getElementById("page");
+		/*var obj = document.getElementById("page");
 		obj.addEventListener('touchstart',function(event){
 		     // 如果这个元素的位置内只有一个手指的话
 		    if(event.targetTouches.length == 1){
@@ -73,8 +73,19 @@
 				}
 			},50);
 		    }
-		}, false);/**/
-		
+		}, false);*/
+		obj.bind("tap",function(){
+			timer = setInterval(function(){
+				if(ht > 0){
+					ht-=0.5;
+					obt.height(ht+'%');
+				}else{
+					clearTimeout(timer);
+					window.location='Fireworks.html';
+					//console.log(ht);
+				}
+			},50);
+		});
 	});
 </script>
 </head>
